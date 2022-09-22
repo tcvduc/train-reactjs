@@ -1,0 +1,307 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --color-bg: #333333;
+  --color-add-button: #ff9900;
+  --color-delete-text: #dc3942;
+  --color-complete-text: #178b46;
+  --color-item-text: #f38b18;
+  --color-item-description: #e3ebf0;
+  --color-item-bg: #444444;
+  --border-radius-value: 2px;
+  --spacing-value: 24px;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--color-item-bg);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-item-bg);
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-add-button);
+  border-radius: 15px;
+}
+
+.layer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+}
+
+.title {
+  color: var(--color-item-description);
+  font-size: 24px;
+  margin: 0 auto;
+  font-weight: 500;
+  text-align: center;
+  padding: 24px;
+}
+
+.layerInputTaskAndListTask {
+  margin: 0 auto;
+}
+
+.inputTask {
+  width: 100%;
+  background-color: var(--color-item-bg);
+  border-radius: var(--border-radius-value);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 24px;
+}
+
+.layerValidateForm {
+  width: 100%;
+  margin-top: var(--spacing-value);
+}
+
+.displayNone {
+  display: none;
+}
+
+.validateValue {
+  font-weight: 500;
+}
+
+.validateValue.error {
+  color: #c65a5f;
+}
+
+.validateValue.valid {
+  color: #14b856;
+}
+
+.layerTaskNameAndDescriptionAndButton {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.buttonAddTask {
+  color: #fff;
+  background-color: var(--color-add-button);
+  width: 100%;
+  padding: 6px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-value);
+  cursor: pointer;
+  font-weight: 500;
+  user-select: none;
+  font-size: 16px;
+  margin-top: var(--spacing-value);
+  border-radius: var(--border-radius-value);
+}
+
+.buttonAddTask:hover {
+  background-color: #fba523;
+}
+
+.buttonAddTask:active {
+  background-color: #ffc368;
+}
+
+.taskName {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.labelTaskName {
+  color: var(--color-item-description);
+  font-weight: 500;
+}
+
+.inputTaskName {
+  padding: 6px 12px;
+  border-radius: var(--border-radius-value);
+  outline: none;
+  border: none;
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+.taskDescription {
+  font-weight: 500;
+  font-size: 16px;
+  width: 100%;
+  margin-top: var(--spacing-value);
+}
+
+.labelTaskDescription {
+  color: var(--color-item-description);
+}
+
+.inputTaskDescription {
+  padding: 6px 12px;
+  border-radius: var(--border-radius-value);
+  outline: none;
+  border: none;
+  margin-top: 12px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.listTask {
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.itemTask {
+  width: 100%;
+  background-color: var(--color-item-bg);
+  margin-bottom: 24px;
+  border-radius: var(--border-radius-value);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.itemTask:last-child {
+  margin-bottom: 0;
+}
+
+.layerItemTaskNameAndDescription {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.layerTaskStatusAndDeleteButton {
+  margin-left: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemTaskName {
+  color: var(--color-add-button);
+  font-size: 24px;
+  font-weight: 500;
+  user-select: none;
+  word-break: break-all;
+}
+
+.itemTaskDescription {
+  color: var(--color-item-description);
+  font-weight: 500;
+  margin-top: 12px;
+  user-select: none;
+  word-break: break-all;
+}
+
+.buttonDelete,
+.buttonStatus {
+  padding: 6px 12px;
+  border-radius: 50px;
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.buttonDelete {
+  margin-left: 24px;
+  background-color: #e0cccc;
+  color: var(--color-delete-text);
+  border: 1px solid var(--color-delete-text);
+}
+
+.buttonDelete:hover {
+  background-color: #ffdede;
+}
+
+.buttonDelete:active {
+  background-color: #ffbebe;
+}
+
+.buttonStatus.completed {
+  background-color: #d9e4de;
+  color: var(--color-complete-text);
+  border: 1px solid var(--color-complete-text);
+}
+
+.buttonStatus.completed:hover {
+  background-color: #e3ffee;
+}
+
+.buttonStatus.completed:active {
+  background-color: #a2f9c5;
+}
+
+.buttonStatus.working {
+  color: #3791ff;
+  background-color: #cbe2fe;
+  border: 1px solid #3791ff;
+}
+
+.buttonStatus.working:hover {
+  background-color: #e3f0ff;
+}
+
+.buttonStatus.working:active {
+  background-color: #b6d8ff;
+}
+
+.working {
+  inset: 0;
+}
+
+.completed {
+  inset: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .layerInputTaskAndListTask {
+    width: 700px;
+  }
+
+  .layerTaskNameAndDescriptionAndButton {
+    flex-wrap: nowrap;
+  }
+
+  .layerTaskNameAndDescriptionAndButton {
+    width: 100%;
+    align-items: center;
+  }
+
+  .taskDescription {
+    margin-top: 0;
+    margin-left: var(--spacing-value);
+  }
+
+  .buttonAddTask {
+    height: fit-content;
+    min-width: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin-left: var(--spacing-value);
+    margin-top: 0;
+  }
+}
